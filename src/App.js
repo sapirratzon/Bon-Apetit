@@ -1,24 +1,26 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter, Route } from "react-router-dom";
+import NavigationBar from "./Components/NavigationBar/NavigationBar"
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <BrowserRouter >
+        <div className="App" >
+          <Route component={NavigationBar} />
+          <div className="content" >
+            {/*<Route exact path="/" component={HomePage} />*/}
+            {/*<Route*/}
+            {/*    path="/Discussion/:isSimulation/:simulationCode"*/}
+            {/*    render={(props) => <Discussion {...props}*/}
+            {/*                                   isSimulation={props.match.params.isSimulation}*/}
+            {/*                                   simulationCode={props.match.params.simulationCode} />} />*/}
+            {/*<Route path="/login/" component={Login} />*/}
+            {/*<Route path="/registration/" component={Registration} />*/}
+            {/*<Route path="/moderatorsManagement/" component={Moderators} />*/}
+          </div >
+        </div >
+      </BrowserRouter >
   );
 }
 

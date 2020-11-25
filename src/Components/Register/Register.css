@@ -1,0 +1,48 @@
+.modal-dialog:before {
+    opacity: 0.2;
+}
+
+.modal-dialog {
+    background: url("../../assets/cinnamon.jpg") center;
+    background-size: cover;
+    border-radius: 15px;
+}
+
+.modal-header {
+    align-self: flex-end;
+    margin-right: 100px;
+}
+
+.modal-footer {
+    align-self: flex-end;
+    margin-right: 50px;
+}
+
+.modal-header, .modal-content {
+    background-color: transparent;
+}
+
+.form-control {
+    width: 50%;
+    margin-right: 25px;
+    float: right;
+    opacity: 0.8;
+    border-radius: 20px;
+}
+
+.cancel-btn, .register-btn {
+    background-color: #e8b895;
+    background-image: linear-gradient(141deg, #e6dfc1b8,#e8b895);
+    color: #ffffff;
+    font-weight: 500;
+    border-radius: 30px;
+}
+
+.register-error {
+    width: 100%;
+    text-align: end;
+}
+
+.error {
+    color: white;
+}

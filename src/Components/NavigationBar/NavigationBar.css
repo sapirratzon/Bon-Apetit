@@ -1,0 +1,33 @@
+.navbar {
+    /*background-image: linear-gradient(141deg, #e6dfc1 0%, #f5e6a1 51%, #e8d788 61%);*/
+    background-image: linear-gradient(141deg, #e6dfc1 0%, #e6dfc1b8 51%, #e6dfc18c 61%);
+    z-index: 1;
+}
+
+.navbar-nav {
+    margin-top: 0;
+    align-items: center;
+}
+
+.main-nav {
+    width: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 7% 4% 5% 7% 63%;
+}
+
+.nav-item, .nav-logo {
+    margin-right: 30px;
+    color: #86442c;
+    font-weight: 500;
+    font-family: monospace;
+    font-size: 15px;
+}
+
+.nav-item:hover {
+    color: #86442c;
+}
+
+.navbar {
+    padding: 3px;
+}

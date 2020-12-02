@@ -9,11 +9,8 @@
     align-items: center;
 }
 
-.main-nav {
-    width: 100%;
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-columns: 7% 4% 5% 7% 63%;
+.nav-right {
+    justify-content: flex-end;
 }
 
 .nav-item, .nav-logo {
@@ -26,6 +23,7 @@
 
 .nav-item:hover {
     color: #86442c;
+    cursor: pointer;
 }
 
 .navbar {

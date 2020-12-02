@@ -16,7 +16,7 @@ const NavigationBar = () => {
 
     return (
         <nav className="navbar navbar-expand-sm" >
-            <ul className="navbar-nav main-nav" >
+            <ul className="navbar-nav nav-left col-9" >
                 <Link to={ '/' } >
                     <img className="nav-logo mx-3 my-1" src={ logo } alt="logo" width={ 80 } height={ 60 } />
                 </Link >
@@ -24,8 +24,9 @@ const NavigationBar = () => {
                 <Link className="nav-item" to={ '/search' } >Search</Link >
                 <Link className="nav-item" to={ '/my-revipes' } >My Recipes</Link >
                 <Link className="nav-item" to={ '/about' } >About Us</Link >
+            </ul >
                 { currentUser ?
-                    <ul className="navbar-nav user-nav" >
+                    <ul className="navbar-nav nav-right col-3" >
                         <li className="nav-item" >Welcome, { currentUser }!</li >
                         <li className="nav-item" onClick={ dispatch({type: "LOGOUT"}) } >
                             <Link className="nav-link" to={ '/' } >
@@ -33,7 +34,7 @@ const NavigationBar = () => {
                             </Link >
                         </li >
                     </ul > :
-                    <ul className="navbar-nav user-nav" >
+                    <ul className="navbar-nav nav-right col-3" >
                         <li className="nav-item" onClick={ () => setOpenLoginModal(true) } >
                             <i className="fas fa-sign-in-alt pr-2" />Sign In
                         </li >
@@ -47,7 +48,6 @@ const NavigationBar = () => {
                             show={ openRegisterModal }
                             updateVisibility={ setOpenRegisterModal } /> }
                     </ul > }
-            </ul >
         </nav >
     );
 };

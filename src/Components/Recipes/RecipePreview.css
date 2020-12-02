@@ -1,0 +1,111 @@
+.preview-img {
+    width: 90%;
+}
+
+.card-img-top {
+    position: relative;
+    transition: ease-in all .2s;
+}
+
+.preview-favorite {
+    top: -5px;
+    text-align: left;
+    font-size: 1.1vw;
+    background-color: #f1c40f;
+    padding: 3px;
+    position: absolute;
+    height: 35px;
+    border-right-style: inset;
+    transition: ease-in all .2s;
+}
+
+.preview-favorite:after {
+    height: 6px;
+    width: 8px;
+    left: -6px;
+    top: 0;
+    border-radius: 8px 8px 0 0;
+    background: #f1c40f;
+    filter: brightness(85%);
+    position: absolute;
+    content: "";
+}
+
+.fa-heart {
+    color: white;
+}
+
+.recipe-preview:hover .card-img-top{
+    transform: scale(1.05);
+}
+
+.recipe-preview:hover .preview-favorite{
+    transform: translateX(7px);
+    transition-duration: .2s;
+}
+
+.card-deck {
+    width: 70%;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.recipe-preview {
+    padding: 5px;
+    margin: 13px;
+    text-align: center;
+    height: 340px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px 0 rgba(51, 51, 51, .3);
+    cursor: pointer;
+}
+
+.card-title {
+    font-size: 1.1vw;
+    font-weight: bold;
+    height: 63px;
+    line-height: 24px;
+}
+
+.card-text {
+    font-size: 0.8vw;
+    font-weight: 500;
+    text-align: left;
+    margin-left: 5px;
+}
+
+.icons {
+    height: 21px;
+}
+
+.fa-leaf {
+    color: #50bb1a;
+}
+
+.vegetarian, .vegan, .glutenFree {
+    font-size: 0.64vw;
+    font-weight: 500;
+    width: calc(100% / 3);
+    float: left;
+}
+
+.icons-text {
+    vertical-align: bottom;
+}
+
+.vegetarianIcon, .veganIcon, .glutenFreeIcon {
+    margin-right: 1px;
+}
+
+.vegetarianIcon {
+    width: 22%;
+}
+
+.veganIcon {
+    width: 18%;
+}
+
+.glutenFreeIcon {
+    width: 15%;
+}

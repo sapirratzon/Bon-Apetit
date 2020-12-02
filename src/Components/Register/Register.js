@@ -9,18 +9,25 @@ const Register = props => {
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
+    const [image, setImage] = useState('');
+    const [selectedImage, setSelectedImage] = useState('');
+    const [previewSource, setPreviewSource] = useState('');
 
 
     const validateForm = () => {
-        if (!(username && password && firstName && lastName)) {
+        if (!(username && password && confirmPassword && firstName && lastName)) {
             setError('Fill The Empty Fields Please');
             return false;
         } else if (password.length < 8) {
             setError('Password should contains at least 8 characters!');
             return false;
+        }
+        else if (!password.equals(confirmPassword)) {
+            setError ('Passwords are not identical, Please try again.')
         }
         return true;
     };
@@ -50,6 +57,19 @@ const Register = props => {
         }));
     };
 
+    const handleChooseImage = event => {
+        const image = event.target.files[0];
+        previewImage(image);
+    };
+
+    const previewImage = image => {
+        const reader = new FileReader();
+        reader.readAsDataURL(image);
+        reader.onloadend = () => {
+            setPreviewSource(reader.result);
+        }
+    };
+
     return (
         <Modal
             className="container col-12 p-5"
@@ -68,6 +88,12 @@ const Register = props => {
                     type="password" className="form-control" name="password"
                     placeholder="Password"
                     onChange={ event => setPassword(event.target.value) } />
+            </div >
+            <div className='form-group' >
+                <input
+                    type="confirmPassword" className="form-control" name="confirmPassword"
+                    placeholder="Confirm Password"
+                    onChange={ event => setConfirmPassword(event.target.value) } />
             </div >
             <div className='form-group' >
                 <input
